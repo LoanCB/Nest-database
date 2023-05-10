@@ -11,7 +11,7 @@ export const AppDataSource: DataSourceOptions = {
   username: configService.get('database.username'),
   password: configService.get('database.password'),
   database: configService.get('database.name'),
-  entities: [],
+  entities: [__dirname + '/../**/*.entity{.ts,.js}'],
   migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
   synchronize:
     configService.get('node_env') === 'development' ||

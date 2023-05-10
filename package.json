@@ -20,7 +20,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "typeorm": "npm run build && npx typeorm -d dist/orm/data-source.js",
     "migration:create": "npm run typeorm -- migration:create",
-    "migration:generate": "npm run typeorm -- migration:generate ./src/orm/migrations/$npm_config_migrname --pretty ",
+    "migration:generate": "npm run typeorm -- migration:generate ./src/orm/migrations/$npm_config_migrname --pretty",
     "migration:run": "npm run typeorm -- migration:run",
     "migration:revert": "npm run typeorm -- migration:revert"
   },
@@ -28,9 +28,11 @@
     "@nestjs/common": "^9.0.0",
     "@nestjs/config": "^2.3.1",
     "@nestjs/core": "^9.0.0",
+    "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/typeorm": "^9.0.1",
     "dotenv": "^16.0.3",
+    "mysql2": "^3.3.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0",
     "typeorm": "^0.3.16"
